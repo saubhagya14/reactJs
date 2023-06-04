@@ -1,0 +1,38 @@
+<script src="config/react.development.js"></script>
+<script src="config/babel.min.js"></script>
+<script src="config/react-dom.development.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    function Header() {
+        return <header><div>My Header</div></header>
+    }
+
+    function Nav() {
+        return <nav><ul><li>Home</li><li>About</li><li>Contact us</li></ul></nav>
+    }
+
+    function Containter() {
+        return <div className = "grid_container">
+             <div>Left section</div>
+             <div>middle section</div>
+             <div>right section</div>
+     </div>
+    }
+
+    function Footer() {
+        return <footer><div><h3>&copy; designed by saubhagya</h3></div></footer>
+    }
+
+
+    function App() {
+        return <div><Header/><Nav/><Containter/><Footer/></div>;
+    }
+
+    var container = document.getElementById("root")
+    var root = ReactDOM.createRoot(container);
+    root.render(<App/>)
+</script>

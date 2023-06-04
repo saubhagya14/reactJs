@@ -1,0 +1,20 @@
+<script src="config/react.development.js"></script>
+<script src="config/babel.min.js"></script>
+<script src="config/react-dom.development.js"></script>
+
+<div id = "root"></div>
+
+<script type="text/babel">
+    
+    function My() {
+        return <h1>Hello</h1>
+    }
+    function App() {
+        return <div><My></My><My/><My/><My/><My/><My/><My/><My/><My/><My/></div>
+    }
+
+    var container = document.getElementById("root");
+    var root = ReactDOM.createRoot(container);
+    root.render(<App></App>)
+
+</script>
