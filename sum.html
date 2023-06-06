@@ -1,0 +1,32 @@
+<script src="config/react.development.js"></script>
+<script src="config/babel.min.js"></script>
+<script src="config/react-dom.development.js"></script>
+
+<div id = "root"></div>
+
+<script type="text/babel">
+
+    function App() {
+
+        var a = React.useRef();
+        var b = React.useRef();
+        var result = React.useRef();  
+
+        function clk() {
+            console.log(parseInt(a.current.value) + parseInt(b.current.value));
+            result.current.innerText = parseInt(a.current.value) + parseInt(b.current.value);
+        }
+
+        return <div> 
+            <p>Enter 1st number : <input type="text" placeholder="Enter a number." ref = {a}/></p>
+            <p>Enter 2nd number : <input type="text" placeholder="Enter second number." ref = {b}/></p>
+            <p><input type="Submit" value = "submit" onClick = {clk}/></p>
+            <p>Result :- <span ref = {result}></span></p>
+            </div>
+    }
+
+    var container = document.getElementById("root");
+    var root = ReactDOM.createRoot(container);
+    root.render(<App/>)
+
+</script>
